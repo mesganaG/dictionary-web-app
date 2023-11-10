@@ -1,0 +1,120 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--FFFFFF, #FFF);
+
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+    max-width: 1440px;
+    height: 1205px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 51.18%;
+    height: 2.57%;
+    margin: 61px auto;
+    padding: 0px;
+}
+
+.logo-container img {
+    max-width: 100%;
+}
+
+.mode-types-container {
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 80px;
+    height: 20px;
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
+    padding-left: 26px;
+}
+
+/* .font-container {
+    padding-right: 16px;
+    border-right: 1px solid black;
+
+} */
+
+#dropdown-btn {
+    width: 120px;
+    height: 24px;
+    text-align: center;
+    padding: 0;
+    background:transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+#dropdown-btn::after {
+    content: url("./assets/images/icon-arrow-down.svg");
+    width: 12px;
+    height: 6px;
+    padding-left: 14px;
+}
+
+.dropdown-menu.show {
+    width: 183px;
+    height: 152px;
+    flex-shrink: 0;
+    margin-top:11px;
+    margin-left: -72px;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu{
+    width: 90px;
+    height: 104px;
+}
+
+
+.dropdown-item{
+    width:90px;
+    height: 24px;
+    margin: 24px 69px 16px 24px;
+    padding: 0;
+}
+
+.dropdown-menu a:hover{
+    color: var(--A445ED, #A445ED);
+    background-color: transparent;
+}
+
+.form-switch .form-check-input:not(:checked) {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    background-color: #757575;
+    border:none;
+}
+
+.form-switch .form-check-input:checked{
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    background-color: #A445ED;
+    border: none;
+}
+
+.form-switch .form-check-input:focus {
+    box-shadow: none;
+
+}
+
