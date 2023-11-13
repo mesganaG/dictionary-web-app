@@ -40,6 +40,15 @@ function playBtnHoverEffect() {
   });
 }
 
+
+// Dark mode 
+
+const darkModeBtn = document.querySelector("#flexSwitchCheckDefault");
+
+
+darkModeBtn.addEventListener("click", function () {
+     document.body.classList.toggle("dark-mode");
+});
 fontUpdate();
 searchOutlineUpdate();
 playBtnHoverEffect();
