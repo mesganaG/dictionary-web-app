@@ -20,6 +20,8 @@
   </head>
   <body>
     <main>
+
+      
       <nav class="navbar">
         <div class="logo-container">
           <img src="./assets/images/logo.svg" alt="logo" />
@@ -84,12 +86,12 @@
         <p>Whoops, can't be empty...</p>
       </div>
       <!-- Search sections ends here -->
-
+      <div class="all-container">
       <div class="answer-main-container">
         <div class="searched-word-container">
           <div class="searched-word">
-            <h1>Keyboard</h1>
-            <p>/ˈkiːbɔːd/</p>
+            <h1 id="word"></h1>
+            <p  id="pronouncation"></p>
           </div>
 
           <div class="play-btn-container">
@@ -104,59 +106,35 @@
         </div>
 
         <div class="word-type">
-          <p>noun</p>
+          <p id="part-of-speech-noun"></p>
           <div class="horizontal-line"></div>
         </div>
 
         <div class="meaning-container">
           <h4>Meaning</h4>
 
-          <ul>
-            <li class="noun-meaning">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                consectetur adipisicing elit. Odio,
-              </p>
-            </li>
-            <li class="noun-meaning">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                consectetur adipisicing elit. Odio,
-              </p>
-            </li>
-            <li class="noun-meaning">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                consectetur adipisicing elit. Odio,
-              </p>
-            </li>
+
+          <ul class="definition-list">
+
           </ul>
+            
 
           <div class="synonyms-container">
             <h4>Synonyms</h4>
-            <span class="synonym-list"><a href="">electronic keyboard</a></span>
+            <span class="synonym-list"></span>
           </div>
         </div>
 
         <div class="word-type">
-          <p>Verb</p>
+             <p id="part-of-speech-verb"></p>
           <div class="horizontal-line"></div>
         </div>
 
         <div class="meaning-container">
           <h4>Meaning</h4>
 
-          <ul>
-            <li class="verb-meaning">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                consectetur adipisicing elit. Odio,
-              </p>
-            </li>
-            <q class="example"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-              consectetur adipisicing elit. Odio</q
-            >
+          <ul class="verb-definiton">
+           
           </ul>
         </div>
 
@@ -174,6 +152,8 @@
             /></a>
           </p>
         </div>
+      </div>
+
       </div>
     </main>
 

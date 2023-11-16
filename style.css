@@ -27,6 +27,10 @@ main {
   margin: 0 auto;
 }
 
+.all-container {
+  display: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -252,6 +256,7 @@ main {
   gap: 13px;
   margin-left: 22px;
   margin-top: 25px;
+  color: var(--secondary-color);
 }
 
 .meaning-container h4 {
@@ -261,17 +266,13 @@ main {
   font-size: 20px;
   font-weight: 400;
 }
-
-.meaning-container li p {
-  color: var(--secondary-color);
+.meaning-container li::marker{
+  color: #a445ed;
 }
+
 
 .meaning-container q {
   color: #757575;
-}
-
-.meaning-container li {
-  color: #a445ed;
 }
 
 .synonyms-container {
@@ -288,14 +289,14 @@ main {
   color: #a445ed;
 }
 
-.synonym-list a {
-  text-decoration: none;
+.synonym-list{
   color: #a445ed;
 }
 
-.synonym-list a:hover {
+.synonym-list:hover {
   text-decoration: underline;
-  text-decoration-thickness: 0.8px;
+  text-decoration-thickness: 1.9px;
+  text-underline-position: under;
 }
 
 .source-container {
@@ -379,6 +380,7 @@ main {
 
 
   .navbar {
+    margin: 24px auto;
     width: 100%;
   }
 

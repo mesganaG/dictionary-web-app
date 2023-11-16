@@ -26,7 +26,6 @@ function SearchBoxEffect() {
   const searchBtn = document.querySelector(".search-btn");
   const displayError = document.querySelector("p");
   inputText.addEventListener("click", function () {
-    
     inputContainer.style.border = "1px solid #A445ED";
     searchBtn.addEventListener("click", function () {
       if (inputText.value === "") {
@@ -65,6 +64,59 @@ function DarkMode() {
     }
   });
 }
+
+// API calls
+const searchBtn = document.querySelector(".search-btn");
+searchBtn.onclick = () => {
+
+  
+  const wordInput = document.querySelector(".search-bar-input").value;
+  const URL = `https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`;
+  const word = document.getElementById("word");
+  const pronouncation = document.getElementById("pronouncation");
+  const partOfSpeechVerb = document.getElementById("part-of-speech-verb");
+  const partOfSpeechNoun = document.getElementById("part-of-speech-noun");
+  const synonym = document.querySelector(".synonym-list");
+  let options = { method: "GET" };
+  fetch(URL, options)
+    .then((response) => {
+      if (!response.ok) {
+        document.querySelector(".all-container").style.display = "none";
+        throw Error(
+          response.statusText + " - " + response.url + " - " + response.status
+        );
+      }
+      return response.json();
+    })
+    .then((data) => {
+      document.querySelector(".all-container").style.display = "block";
+      const definitionNoun = data[0].meanings[0].definitions;
+      const definitionVerb = data[0].meanings[1].definitions;
+      const listContainerNoun = document.querySelector(".definition-list");
+      const listContainerVerb = document.querySelector(".verb-definiton");
+      word.innerText = data[0].word;
+      pronouncation.innerText = data[0].phonetics[0].text;
+      partOfSpeechNoun.innerText = data[0].meanings[0].partOfSpeech;
+      partOfSpeechVerb.innerText = data[0].meanings[1].partOfSpeech;
+      synonym.innerText = data[0].meanings[0].synonyms.join(", ");
+      console.log(data);
+      listContainerNoun.innerHTML = "";
+      listContainerVerb.innerHTML = "";
+      for (let def = 0; def < definitionNoun.length; def++) {
+        const listItem = document.createElement("li");
+        listItem.innerText = definitionNoun[def].definition;
+        listContainerNoun.appendChild(listItem);
+      }
+      for (let def = 0; def < definitionVerb.length; def++) {
+        const listItem = document.createElement("li");
+        listItem.innerText = definitionVerb[def].definition;
+        listContainerVerb.appendChild(listItem);
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 
 fontUpdate();
 SearchBoxEffect();
