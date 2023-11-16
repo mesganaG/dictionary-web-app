@@ -86,6 +86,14 @@
         <p>Whoops, can't be empty...</p>
       </div>
       <!-- Search sections ends here -->
+
+      <div class="no-definition">
+        <img src="./assets/images/sorry.png" alt="sticker image">
+        <h2>No Definitions Found </h2>
+        <p>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search 
+          agan at later time or head to the web instead.
+        </p>
+      </div>
       <div class="all-container">
       <div class="answer-main-container">
         <div class="searched-word-container">
@@ -95,6 +103,7 @@
           </div>
 
           <div class="play-btn-container">
+
             <button class="play-btn">
               <img
                 class="btn-img"
@@ -106,7 +115,7 @@
         </div>
 
         <div class="word-type">
-          <p id="part-of-speech-noun"></p>
+          <p id="part-of-speech-noun">noun</p>
           <div class="horizontal-line"></div>
         </div>
 
@@ -126,7 +135,7 @@
         </div>
 
         <div class="word-type">
-             <p id="part-of-speech-verb"></p>
+             <p id="part-of-speech-verb">Verb</p>
           <div class="horizontal-line"></div>
         </div>
 
@@ -144,12 +153,11 @@
           <p>
             Source
             <a
-              href="https://en.wiktionary.org/wiki/keyboard"
               target="_blank"
               rel="noreferrer noopener"
-              >https://en.wiktionary.org/wiki/keyboard<img
-                src="assets/images/icon-new-window.svg"
-            /></a>
+              id="src-link"
+              >https://en.wiktionary.org/wiki/keyboard</a> 
+              <img src="assets/images/icon-new-window.svg"/>
           </p>
         </div>
       </div>
