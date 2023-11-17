@@ -11,16 +11,15 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
   - [Built with](#built-with)
 - [Author](#Mesgana)
 
-### Screenshot
+# Dictionary web app
 
 ![](./preview.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [here](https://github.com/mesganaG/dictionary-web-app.git)
+- Live Site URL: [here](https://github.com/mesganaG/dictionary-web-app)
 
-## My process
 
 ### Built with
 
@@ -29,9 +28,8 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
+- JavaScript - JS library
 
 ## Author
-
 - Frontend Mentor - [@mesganaG](https://www.frontendmentor.io/profile/mesganaG)
 
