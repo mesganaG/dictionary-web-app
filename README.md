@@ -5,6 +5,7 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
 # Dictionary web app
 
 ![](./preview.jpg)
+![](./screen-shot-1.png)
 
 ### Links
 
