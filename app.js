@@ -115,7 +115,7 @@ function DarkMode() {
 
 const searchBtn = document.querySelector(".search-btn");
 
-searchBtn.onclick = function activate() {
+searchBtn.onclick = () => {
   const wordInput = document.querySelector(".search-bar-input").value;
   /**
    * The URL for the API endpoint to retrieve the definition of a word.
@@ -223,11 +223,6 @@ const logoEl = document.getElementById("logo-img");
 
 logoEl.onclick = () => { window.location.reload();}
 
-searchBtn.addEventListener("keypress", function(event) {
-  if(event.key === "Enter"){
-    activate();
-  }
-}
 
 /**
  * Call the functions to set up the page.
