@@ -157,7 +157,6 @@ searchBtn.onclick = () => {
       const listContainerVerb = document.querySelector(".verb-definiton");
       const example = document.createElement("q");
       word.innerText = data[0].word;
-      pronouncation.innerText = data[0].phonetics[0].text;
       synonym.innerText = data[0].meanings[0].synonyms.join(", ");
       console.log(data);
       listContainerNoun.innerHTML = "";
@@ -178,7 +177,7 @@ searchBtn.onclick = () => {
       for (let def = 0; def < definitionVerb.length; def++) {
         const listItem = document.createElement("li");
         listItem.innerText = definitionVerb[def].definition;
-        
+
         listContainerVerb.appendChild(listItem);
       }
 
@@ -189,6 +188,11 @@ searchBtn.onclick = () => {
       }
       listContainerVerb.appendChild(example);
 
+      //pronouncation.innerText = data[0].phonetics[0].text;
+      if(data[0].phonetics[0].text !== undefined){
+        pronouncation.innerText = data[0].phonetics[0].text; 
+
+      }
 
       /**
        * Play the audio pronunciation of the word when the play button is clicked.
@@ -205,7 +209,8 @@ searchBtn.onclick = () => {
        * Displays source link for the definition of the word.
        * The link is displayed as a clickable link that opens in a new tab.
        */
-      const sourceLink = document.getElementById("src-link").innerText = data[0].sourceUrls[0];
+      const sourceLink = (document.getElementById("src-link").innerText =
+        data[0].sourceUrls[0]);
       document.getElementById("src-link").href = sourceLink;
     })
     .catch((error) => {
@@ -213,6 +218,10 @@ searchBtn.onclick = () => {
     });
   }
 };
+
+const logoEl = document.getElementById("logo-img");
+
+logoEl.onclick = () => { window.location.reload();}
 
 /**
  * Call the functions to set up the page.
