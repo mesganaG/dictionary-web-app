@@ -78,8 +78,8 @@ function playBtnHoverEffect() {
 /**
  * The event handler function to update the page to dark mode.
  * This function is called when the user clicks on the dark mode toggle button.
- * The function updates the page to dark mode.
  * The function also updates the dark mode toggle button to the active dark mode toggle button.
+ * The function also updates based on the user's system preference.
  */
 function DarkMode() {
   const darkModeBtn = document.querySelector("#flexSwitchCheckDefault");
@@ -94,6 +94,15 @@ function DarkMode() {
         "./assets/images/icon-moon.svg";
     }
   });
+
+  const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  if(darkTheme.matches){
+    document.body.classList.toggle("dark-mode");
+    document.querySelector(".moon-icon").src =
+        "./assets/images/darkmode_half-moon.svg";
+    darkModeBtn.checked = true;
+  } 
+
 }
 
 /**
