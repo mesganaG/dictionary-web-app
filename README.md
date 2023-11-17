@@ -17,8 +17,8 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [here](https://github.com/mesganaG/dictionary-web-app.git)
-- Live Site URL: [here](https://github.com/mesganaG/dictionary-web-app)
+- Solution URL: [here](https://github.com/mesganaG/dictionary-web-app)
+- Live Site URL: [here](https://mesganag.github.io/dictionary-web-app/)
 
 
 ### Built with
