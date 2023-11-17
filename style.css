@@ -386,6 +386,10 @@ main {
   .display-error {
     width: 100%;
   }
+  
+  .no-definition {
+    width: 100%;
+  }
 }
 
 /* Media query for Mobile */
@@ -430,6 +434,9 @@ main {
   }
 
   .display-error {
+    width: 100%;
+  }
+  .no-definition {
     width: 100%;
   }
 
