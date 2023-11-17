@@ -115,7 +115,7 @@ function DarkMode() {
 
 const searchBtn = document.querySelector(".search-btn");
 
-searchBtn.onclick = function activeate() {
+searchBtn.onclick = function activate() {
   const wordInput = document.querySelector(".search-bar-input").value;
   /**
    * The URL for the API endpoint to retrieve the definition of a word.
